@@ -18,7 +18,7 @@ When(`I select the 6 meals plan`, () => {
     cy.wait(2000)
     cookHome.getContinueBtn().click({ force: true });
     cy.wait(2000)
-  });
+});
 
 Then(`I fill the input email with {string}`, (email,) => {
     cy.wait(2000)
@@ -40,10 +40,9 @@ Then(`I submit login form`, () => {
     cy.wait(2000)
     cookLogin.getLoginBtn().click({ force: true });
     cy.wait(5000)
-   });
+});
 
-
-   Then(`the URL should contain {string}`, (mealSelect) => {
+Then(`the URL should contain {string}`, (mealSelect) => {
     cookLogin.getLoginBtn().click();
     cy.wait(6000)
     cy.url({ timeout: 10000 }).should('include', mealSelect);
@@ -52,4 +51,4 @@ Then(`I submit login form`, () => {
     .should('exist') 
     .its('length') 
     .should('be.gte', 2); 
-   });   
+});   

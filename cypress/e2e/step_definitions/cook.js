@@ -1,4 +1,5 @@
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import '../support/commands';
 const cookHome = require ("../../pages/cookpage");
 const cookLogin = require ("../../pages/cookLogin")
 

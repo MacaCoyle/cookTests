@@ -36,7 +36,7 @@ Then(`I fill the input password with {string}`, (password) => {
     cy.wait(5000)
 });
 
-Then(`I log in`, () => {
+Then(`I submit login form`, () => {
     cy.wait(2000)
     cookLogin.getLoginBtn().click({ force: true });
     cy.wait(5000)

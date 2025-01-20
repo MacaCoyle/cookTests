@@ -14,7 +14,6 @@ getLoginAccountLink(){
    ;
 }
 
-
 getEmailInput(){
    return cy.get('[data-testid="email"]');
 }
@@ -26,6 +25,10 @@ getPassworInput(){
 getLoginBtn(){
    cy.get('[data-testid="submit-form"]')
 }
+   
+getCookCards(){
+   cy.get('[data-testid="meal-card"]')
+}  
 
 }
 module.exports = new CookLogin();

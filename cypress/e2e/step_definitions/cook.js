@@ -45,6 +45,11 @@ Then(`I log in`, () => {
 
    Then(`the URL should contain {string}`, (mealSelect) => {
     cookLogin.getLoginBtn().click();
-    cy.wait(5000)
+    cy.wait(6000)
     cy.url({ timeout: 10000 }).should('include', mealSelect);
+    cy.wait(4000)
+    cy.get('[data-testid="meal-card"]') 
+    .should('exist') 
+    .its('length') 
+    .should('be.gte', 2); 
    });   

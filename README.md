@@ -10,4 +10,4 @@ Run tests with
 
 
 Notes:
-Api testing are running well. UI test sometimes does not run well due to A/B testing and some time issues and prompts (I didn't get it fixed in time and there are still some things to improve)
+Api tests are running well. UI test sometimes does not run well due to A/B testing and some time issues and prompts (I didn't get it fixed in time and there are still some things to improve)

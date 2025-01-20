@@ -47,10 +47,5 @@ Then(`the URL should contain {string}`, (mealSelect) => {
     cy.wait(6000)
     cy.url({ timeout: 10000 }).should('include', mealSelect);
     cy.wait(4000)
-    Cypress.Commands.add('verifyCardsCount', (selector, minimumCount) => {
-       cookLogin.getCookCards()
-       .should('exist') 
-       .its('length')
-       .should('be.gte', minimumCount); 
-    });
+    cy.verifyCardsCount(getCookCards(), 2);
  });   

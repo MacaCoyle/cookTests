@@ -1,4 +1,4 @@
-# cookUnityChallenge
+# Cook Unity challenge
 
 - npm init
 - npm install cypress

@@ -1,7 +1,7 @@
 {
   "name": "cypress-cucumber",
   "version": "1.0.0",
-  "description": "Test de cypress con cucumber",
+  "description": "Cypress with cucumber",
   "main": "index.js",
   "scripts": {
     "test": "test",

@@ -1,5 +1,6 @@
 # Cook Unity challenge
 
+Install dependencies:
 - npm init
 - npm install cypress
 - npm install @badeball/cypress-cucumber-preprocessor

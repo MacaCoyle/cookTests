@@ -48,7 +48,7 @@ Then(`I submit login form`, () => {
     cy.wait(6000)
     cy.url({ timeout: 10000 }).should('include', mealSelect);
     cy.wait(4000)
-    cy.get('[data-testid="meal-card"]') 
+    cookLogin.getCookCards()
     .should('exist') 
     .its('length') 
     .should('be.gte', 2); 

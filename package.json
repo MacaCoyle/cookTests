@@ -1,0 +1,43 @@
+{
+  "name": "cypress-cucumber",
+  "version": "1.0.0",
+  "description": "Test de cypress con cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cypress:run:all": "npx cypress run --e2e --browser chrome -e \"tags=not @ignore\" -s cypress/e2e/features/**/*.feature",
+    "generate:report": "node cucumber-report.html"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "tests"
+  ],
+  "license": "ISC",
+
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0"
+  },
+  "devDependencies": {
+    "cypress": "^13.3.0",
+    "multiple-cucumber-html-reporter": "^3.5.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "reports/log.json"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "reports/messages.ndjson"
+    },
+    "stepDefinitions": [
+      "cypress/e2e/step_definitions/*.{js,ts}"
+    ],
+    "html": {
+      "enabled": true,
+      "output": "reports/cucumber-report.html"
+    }
+  }
+}
